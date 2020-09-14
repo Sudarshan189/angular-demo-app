@@ -1,0 +1,11 @@
+ <!-- forms html -->
+ <div class="m-4 p-5">
+  <form (ngSubmit)="formSubmit(theForm)" #theForm="ngForm">
+    <div class="form-group">
+      <label for="uname">Title:</label>
+      <input type="text" ngModel name="title" id="uname" placeholder="Enter Title" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+  </form>
+</div>

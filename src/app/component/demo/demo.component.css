@@ -1,0 +1,15 @@
+.box {
+  height: 20px;
+  width: 100px;
+  border: 1px solid black;
+  background: black;
+  cursor: pointer;
+}
+
+.isActive {
+  color: green;
+}
+
+.notActive {
+  color: red;
+}

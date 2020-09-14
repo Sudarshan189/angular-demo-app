@@ -1,0 +1,48 @@
+<!-- ngClass Directive -->
+<h1 [ngClass]="{isActive:status}">{{firstName}} is active</h1>
+
+<!-- ngStyle directive-->
+<h1 [ngStyle]="{color: status ? 'green' : 'red'}">Sudarshan in red</h1>
+
+<!-- ngFor DIrective-->
+<ul>
+  <li *ngFor="let post of posts; let i = index">{{i+1}}{{post.title}}</li>
+
+</ul>
+
+<!-- ngIf  Directive-->
+<h1 *ngIf="status; else notActive">{{ firstName }}</h1>
+<button (click)="getUserStatus()" class="btn btn-primary btn-sm">Click</button>
+<ng-template #notActive>
+  <p>Not active</p>
+</ng-template>
+
+
+<!-- Two way data binding-->
+<input [(ngModel)]="lastName" type="text"/>
+<p>{{lastName}}</p>
+
+<br/><br/><br/>
+<!--  Evevn binding-->
+
+<br/><br/><br/>
+
+<!--  Evevn binding-->
+<div class="box" (mouseover)="greetUser()"></div>
+
+
+
+<br/>
+<br/>
+<!-- Property binding-->
+<label for="status">Active</label>
+<input type="radio" id="status" [checked]="status"/>
+
+
+<!--   Data binding-->
+<h1>
+  Welcome to {{firstName}} {{lastName}}
+</h1>
+{{city ? city : 'No City'}}
+<br/>
+{{displayFirstName()}}
